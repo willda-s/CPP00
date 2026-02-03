@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   Contact_Setter.cpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: williamguerreiro <williamguerreiro@stud    +#+  +:+       +#+        */
+/*   By: willda-s <willda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 14:51:13 by williamguer       #+#    #+#             */
-/*   Updated: 2025/11/11 17:20:25 by williamguer      ###   ########.fr       */
+/*   Updated: 2026/02/03 23:36:32 by willda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook_class.hpp"
+#include "PhoneBook.hpp"
 
 void Contact::setFirstName(const std::string& firstName)
 { 
@@ -25,7 +25,7 @@ void Contact::setNickname(const std::string& nickname)
 { 
     this->_nickname = nickname; 
 }
-void Contact::setPhoneNumber(const long& phoneNumber) 
+void Contact::setPhoneNumber(const std::string& phoneNumber) 
 { 
     this->_phone_number = phoneNumber; 
 }

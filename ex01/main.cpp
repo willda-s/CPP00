@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: williamguerreiro <williamguerreiro@stud    +#+  +:+       +#+        */
+/*   By: willda-s <willda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 13:59:24 by williamguer       #+#    #+#             */
-/*   Updated: 2025/11/11 16:19:07 by williamguer      ###   ########.fr       */
+/*   Updated: 2026/02/03 23:49:20 by willda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook_class.hpp"
+#include "PhoneBook.hpp"
 
 int main(void)
 {
@@ -18,7 +18,7 @@ int main(void)
     std::string command;
     while (1)
     {
-        std::cout << "Enter command (ADD, SEARCH, EXIT): ";
+        std::cout << "\033[34mEnter command (ADD, SEARCH, EXIT): \033[0m";
         if (!std::getline(std::cin, command) || command == "EXIT")
             break;
         else if (command == "ADD")
@@ -31,10 +31,3 @@ int main(void)
     
     return (0);
 }
-/*
-Analogie :
-
-Sans & : On vous donne une photocopie du document
-Avec & : On vous montre le document original
-Avec const & : On vous montre le document original, mais vous ne pouvez que le lire
-*/

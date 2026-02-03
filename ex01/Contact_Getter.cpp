@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   Contact_Getter.cpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: williamguerreiro <williamguerreiro@stud    +#+  +:+       +#+        */
+/*   By: willda-s <willda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 14:36:10 by williamguer       #+#    #+#             */
-/*   Updated: 2025/11/11 17:19:45 by williamguer      ###   ########.fr       */
+/*   Updated: 2026/02/03 23:38:06 by willda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook_class.hpp"
+#include "PhoneBook.hpp"
 
 Contact::Contact(void)
 {
-    this->_phone_number = -1;
+    this->_phone_number = "";
     this->_index = -1;
     this->_first_name = "";
     this->_last_name = "";
@@ -42,7 +42,7 @@ std::string Contact::getNickname(void) const
     return this->_nickname;
 }
 
-long Contact::getPhoneNumber(void) const
+std::string Contact::getPhoneNumber(void) const
 {
     return this->_phone_number;
 }

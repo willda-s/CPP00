@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: williamguerreiro <williamguerreiro@stud    +#+  +:+       +#+        */
+/*   By: willda-s <willda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 14:52:05 by williamguer       #+#    #+#             */
-/*   Updated: 2025/11/12 12:13:32 by williamguer      ###   ########.fr       */
+/*   Updated: 2026/02/03 23:49:57 by willda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "PhoneBook_class.hpp"
+#include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook(void)
 {
@@ -45,18 +45,18 @@ void PhoneBook::add_contact(void)
     std::string input, first_name, last_name, nickname, phone_number, darkest_secret;
     int index = _oldest_index;
 
-    std::cout << "Enter First Name: ";
+    std::cout << "\033[35mEnter First Name: \033[0m";
     std::getline(std::cin, first_name);
 
-    std::cout << "Enter Last Name: ";
+    std::cout << "\033[35mEnter Last Name: \033[0m";
     std::getline(std::cin, last_name);
 
-    std::cout << "Enter Nickname: ";
+    std::cout << "\033[35mEnter Nickname: \033[0m";
     std::getline(std::cin, nickname);
 
-    std::cout << "Enter Phone Number: ";
+    std::cout << "\033[35mEnter Phone Number: \033[0m";
     std::getline(std::cin, phone_number);
-    std::cout << "Enter Darkest Secret: ";
+    std::cout << "\033[35mEnter Darkest Secret: \033[0m";
     std::getline(std::cin, darkest_secret);
 
     if (!is_digits(phone_number))
@@ -77,9 +77,16 @@ void PhoneBook::add_contact(void)
     _contacts[index].setFirstName(first_name);
     _contacts[index].setLastName(last_name);
     _contacts[index].setNickname(nickname);
-    _contacts[index].setPhoneNumber(std::stol(phone_number));
+    _contacts[index].setPhoneNumber(phone_number);
     _contacts[index].setDarkestSecret(darkest_secret);
     _contacts[index].setIndex(index);
+}
+
+static int stoi( std::string & s ) 
+{
+    int i;
+    std::istringstream(s) >> i;
+    return i;
 }
 
 void PhoneBook::search_contact(void)
@@ -99,7 +106,7 @@ void PhoneBook::search_contact(void)
                     << std::setw(10) << truncate(_contacts[i].getLastName()) << "|"
                     << std::setw(10) << truncate(_contacts[i].getNickname()) << std::endl;
     }
-    std::cout << "Enter index of the contact to view details: ";
+    std::cout << "\033[32mEnter index of the contact to view details: \033[0m";
     std::getline(std::cin, input);
     if (!is_digits(input))
     {
@@ -111,14 +118,14 @@ void PhoneBook::search_contact(void)
         std::cout << "No input provided!" << std::endl;
         return;
     }
-    index = std::stoi(input);
+    index = stoi(input);
     if (index >= 0 && index < _contact_count)
     {
-        std::cout << "First Name: " << _contacts[index].getFirstName() << std::endl;
-        std::cout << "Last Name: " << _contacts[index].getLastName() << std::endl;
-        std::cout << "Nickname: " << _contacts[index].getNickname() << std::endl;
-        std::cout << "Phone: " << _contacts[index].getPhoneNumber() << std::endl;
-        std::cout << "Secret: " << _contacts[index].getDarkestSecret() << std::endl;
+        std::cout << "\033[32mFirst Name: \033[0m" << _contacts[index].getFirstName() << std::endl;
+        std::cout << "\033[32mLast Name: \033[0m" << _contacts[index].getLastName() << std::endl;
+        std::cout << "\033[32mNickname: \033[0m" << _contacts[index].getNickname() << std::endl;
+        std::cout << "\033[32mPhone: \033[0m" << _contacts[index].getPhoneNumber() << std::endl;
+        std::cout << "\033[32mSecret: \033[0m" << _contacts[index].getDarkestSecret() << std::endl;
     }
     else
         std::cout << "Invalid index!" << std::endl;
