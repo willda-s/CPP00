@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: williamguerreiro <williamguerreiro@stud    +#+  +:+       +#+         #
+#    By: willda-s <willda-s@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/28 02:37:02 by willda-s          #+#    #+#              #
-#    Updated: 2025/11/11 13:24:59 by williamguer      ###   ########.fr        #
+#    Updated: 2026/02/08 16:26:48 by willda-s         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 

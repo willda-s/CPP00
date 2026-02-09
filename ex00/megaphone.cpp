@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: williamguerreiro <williamguerreiro@stud    +#+  +:+       +#+        */
+/*   By: willda-s <willda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/11 12:21:22 by williamguer       #+#    #+#             */
-/*   Updated: 2025/11/11 13:22:51 by williamguer      ###   ########.fr       */
+/*   Created: 2026/02/08 16:27:05 by willda-s          #+#    #+#             */
+/*   Updated: 2026/02/08 16:27:06 by willda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 
 #include <iostream>
 
