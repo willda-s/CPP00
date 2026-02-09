@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: willda-s <willda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/11 13:59:24 by williamguer       #+#    #+#             */
-/*   Updated: 2026/02/03 23:49:20 by willda-s         ###   ########.fr       */
+/*   Created: 2026/02/08 16:27:21 by willda-s          #+#    #+#             */
+/*   Updated: 2026/02/09 17:56:37 by willda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,15 @@ int main(void)
         if (!std::getline(std::cin, command) || command == "EXIT")
             break;
         else if (command == "ADD")
-            phoneBook.add_contact();
+		{
+            if (!phoneBook.add_contact())
+				break;
+		}
         else if (command == "SEARCH")
-            phoneBook.search_contact();
+		{
+            if (!phoneBook.search_contact())
+				break;
+		}
         else
             std::cout << "Invalid command. Please enter ADD, SEARCH, or EXIT." << std::endl;
     }

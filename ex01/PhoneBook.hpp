@@ -6,7 +6,7 @@
 /*   By: willda-s <willda-s@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/11 13:50:55 by williamguer       #+#    #+#             */
-/*   Updated: 2026/02/03 23:38:08 by willda-s         ###   ########.fr       */
+/*   Updated: 2026/02/09 17:55:54 by willda-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,8 @@ class PhoneBook
         PhoneBook(void);
         ~PhoneBook(void);
 
-        void add_contact(void);
-        void search_contact(void);
+        bool add_contact(void);
+        bool search_contact(void);
 };
 
 #endif
